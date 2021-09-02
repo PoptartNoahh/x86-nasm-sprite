@@ -36,7 +36,7 @@ mov bx,[scandex]
 add bx,1
 mov al,[%1 + bx]
 mov bh,00h
-push ax ;set y
+push ax
 push dx
 mov dx,0
 mov ax,[scandex]
@@ -44,20 +44,20 @@ mov bx,%2
 div bx
 mov [scan_y],ax
 pop ax
-pop dx;end set y
-push cx ;set x (bx = index)
+pop dx
+push cx
 push ax
 push dx
 mov ax,%2
 mov cx,[scan_y]
-mul cx  ;ax = 32 * scan_y
+mul cx
 mov cx,ax
 mov ax,[scandex]
 sub ax,cx
 mov [scan_x],ax
 pop cx
 pop ax
-pop dx ;end set x
+pop dx
 push cx
 push dx
 mov cx,[scan_x]
