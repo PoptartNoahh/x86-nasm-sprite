@@ -1,5 +1,5 @@
 ;------------------------------
-;x86 Assembly Sprite Renderer
+;x86 Assembly Sprite Renderer for NASM
 ;Noah E.
 ;------------------------------
 
