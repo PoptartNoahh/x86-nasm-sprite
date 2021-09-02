@@ -110,4 +110,3 @@ out 42,al
 in al,61h
 or al,93h
 out 61h,al
-
