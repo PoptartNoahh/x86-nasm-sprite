@@ -100,7 +100,7 @@ mov ah,0Bh
 mov bh,00h
 mov bl,00h
 int 10h
-mov al,0B6h ;audio
+mov al,0B6h
 mov ax,0B6h
 out 43,al
 mov ax,869h
