@@ -72,18 +72,6 @@ mov bx,[scandex]
 mov [sbuffer + bx],al
 je %%.intb
 %endmacro
+
 _start:
-mov ah,00h
-push ax
-mov ax,13h
-int 10h
-mov al,0B6h
-mov ax,0B6h
-out 43,al
-mov ax,666h
-out 42h,al
-mov al,ah
-out 42,al
-in al,61h
-or al,93h
-out 61h,al
+drawsprite mySprite, width, numberOfPixels, positionX, positionY
