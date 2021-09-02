@@ -69,7 +69,22 @@ int 10h
 push bx
 mov bx,[scandex]
 mov [sbuffer + bx],al
+pop bx
+mov al,[sbuffercolor]
+cmp al,00h
 je %%.intb
+%%.inta
+mov ah,0Ch
+cmp word [scandex],0
+je %%.intb
+int 10h
+%%.intb
+pop cx
+pop dx
+cmp word [scandex],%3
+jne %%.sprite_draw
+pop ax
+pop bx
 %endmacro
 
 _start:
