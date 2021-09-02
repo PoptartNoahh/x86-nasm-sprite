@@ -3,7 +3,6 @@
 ;------------------------------
 
 org 100h
-
 section .data
 
 sbuffer times 4000 db 00h
