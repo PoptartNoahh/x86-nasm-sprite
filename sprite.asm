@@ -90,3 +90,24 @@ pop bx
 
 _start:
 drawsprite mySprite, width, numberOfPixels, positionX, positionY
+
+mov ah,00h
+push ax
+mov ax,13h
+int 10h
+pop ax
+mov ah,0Bh
+mov bh,00h
+mov bl,00h
+int 10h
+mov al,0B6h
+mov ax,0B6h
+out 43,al
+mov ax,869h
+out 42h,al
+mov al,ah
+out 42,al
+in al,61h
+or al,93h
+out 61h,al
+
